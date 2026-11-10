@@ -1,243 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RS Informática | Campinas e Região</title>
+<meta name="description" content="Suporte técnico em TI, manutenção de computadores e suporte remoto em Campinas e cidades próximas.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 Arial,sans-serif;color:#1d2430}
+.container{width:92%;max-width:1100px;margin:auto}
+header{padding:18px 0;background:white;border-bottom:1px solid #ddd}
+.topo{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:bold;color:#062a63;text-decoration:none}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:#062a63;text-decoration:none}
+section{padding:50px 0}
+.hero{background:linear-gradient(120deg,#062a63,#0b5fff);color:white}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.2;max-width:800px}
+h2,h3{color:#062a63}
+.hero p{max-width:750px}
+.btn{display:inline-block;padding:12px 20px;margin:5px 5px 5px 0;border:0;border-radius:8px;background:#0b5fff;color:white;text-decoration:none;font:inherit;font-weight:bold;cursor:pointer}
+.verde{background:#128c45}
+.claro{background:white;color:#062a63}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card,form{padding:24px;background:#f4f7fb;border:1px solid #dce4ef;border-radius:12px}
+.colunas{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.fundo{background:#f4f7fb}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input:not([type=hidden]),textarea{width:100%;padding:12px;border:1px solid #aebdce;border-radius:7px;background:white;font:inherit}
+textarea{min-height:140px;resize:vertical}
+.contato a{color:#0b5fff;overflow-wrap:anywhere}
+.aviso{font-size:13px;color:#526070}
+footer{padding:30px 0 90px;background:#062a63;color:white;text-align:center}
+.flutuante{position:fixed;right:15px;bottom:15px;border-radius:40px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+@media(max-width:750px){.grid,.colunas{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="container topo">
+<a class="logo" href="#inicio">RS Informática</a>
+<nav aria-label="Menu principal">
+<a href="#servicos">Serviços</a>
+<a href="#remoto">Suporte remoto</a>
+<a href="#contato">Contato</a>
+</nav>
+<a class="btn verde" href="https://wa.me/5519984159917">WhatsApp</a>
+</div>
+</header>
 
-  <title>RS Informática | Suporte Técnico em Campinas e Região</title>
+<main>
+<section class="hero" id="inicio">
+<div class="container">
+<h1>Suporte técnico em TI para empresas e residências</h1>
+<p>Manutenção de computadores, configuração de redes, formatação, backup e suporte remoto. Atendimento em Campinas e cidades próximas.</p>
+<a class="btn verde" href="https://wa.me/5519984159917">Falar no WhatsApp</a>
+<a class="btn claro" href="#contato">Solicitar orçamento</a>
+<p>Campinas e cidades próximas · Suporte remoto disponível</p>
+</div>
+</section>
 
-  <meta
-    name="description"
-    content="RS Informática: serviços de informática, suporte técnico em TI, manutenção, redes, formatação, backup e suporte remoto em Campinas e cidades próximas."
-  >
+<section id="servicos">
+<div class="container">
+<h2>Nossos serviços</h2>
+<div class="grid">
+<article class="card">
+<h3>Suporte técnico em TI</h3>
+<p>Diagnóstico e atendimento para computadores, notebooks, impressoras, sistemas e programas.</p>
+</article>
+<article class="card">
+<h3>Manutenção preventiva</h3>
+<p>Limpeza, verificação de componentes, atualizações e ajustes no equipamento.</p>
+</article>
+<article class="card">
+<h3>Formatação e instalação</h3>
+<p>Instalação de Windows, drivers e programas, com definição prévia dos cuidados com seus arquivos.</p>
+</article>
+<article class="card">
+<h3>Redes e Wi-Fi</h3>
+<p>Configuração de roteadores, redes cabeadas e compartilhamento de arquivos.</p>
+</article>
+<article class="card">
+<h3>Backup e arquivos</h3>
+<p>Configuração de cópias de segurança e transferência de arquivos.</p>
+</article>
+<article class="card">
+<h3>Montagem e upgrades</h3>
+<p>Avaliação de compatibilidade, montagem de computadores, instalação de SSD e memória.</p>
+</article>
+</div>
+</div>
+</section>
 
-  <style>
-    :root {
-      --azul: #0b5fff;
-      --azul-escuro: #062a63;
-      --cinza: #f4f7fb;
-      --texto: #1d2430;
-      --branco: #ffffff;
-      --verde: #128c45;
-    }
+<section class="fundo" id="remoto">
+<div class="container">
+<h2>Suporte remoto</h2>
+<p>Solicite uma avaliação para verificar se o problema pode ser atendido remotamente. O acesso ao equipamento é feito com sua autorização.</p>
+<ul>
+<li>Diagnóstico de erros e lentidão.</li>
+<li>Configuração de programas e e-mail.</li>
+<li>Instalação e atualização de softwares.</li>
+<li>Orientação técnica ao usuário.</li>
+</ul>
+<a class="btn verde" href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Gostaria%20de%20suporte%20remoto.">Solicitar suporte remoto</a>
+</div>
+</section>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
+<section id="contato">
+<div class="container">
+<h2>Solicite um atendimento</h2>
+<div class="colunas">
+<div class="contato">
+<h3>Fale com a RS Informática</h3>
+<p>Descreva o problema ou o serviço desejado para avaliarmos sua solicitação.</p>
+<p>WhatsApp:<br><a href="https://wa.me/5519984159917">(19) 98415-9917</a></p>
+<p>E-mail:<br><a href="mailto:ronaldosilva2048@gmail.com">ronaldosilva2048@gmail.com</a></p>
+<p>Campinas e cidades próximas.<br>Suporte remoto disponível mediante avaliação.</p>
+</div>
 
-    html {
-      scroll-padding-top: 140px;
-    }
+<form action="https://formsubmit.co/ronaldosilva2048@gmail.com" method="POST">
+<label for="nome">Nome</label>
+<input id="nome" name="nome" type="text" autocomplete="name" required>
 
-    body {
-      color: var(--texto);
-      background: var(--branco);
-      line-height: 1.6;
-    }
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" autocomplete="email" required>
 
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-    }
+<label for="telefone">Telefone / WhatsApp</label>
+<input id="telefone" name="telefone" type="tel" autocomplete="tel" required>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--branco);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
-    }
+<label for="cidade">Cidade</label>
+<input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
 
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      padding: 16px 0;
-    }
+<label for="servico">Serviço desejado</label>
+<input id="servico" name="servico" type="text" placeholder="Ex.: suporte remoto" required>
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--azul-escuro);
-      text-decoration: none;
-    }
+<label for="mensagem">Mensagem</label>
+<textarea id="mensagem" name="mensagem" required></textarea>
 
-    .logo span {
-      color: var(--azul);
-    }
+<input type="hidden" name="_subject" value="Nova solicitação pelo site - RS Informática">
+<input type="hidden" name="_captcha" value="false">
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      list-style: none;
-    }
+<p class="aviso">Os dados serão encaminhados pelo FormSubmit à RS Informática para responder à solicitação. Não envie senhas ou informações sensíveis.</p>
+<button class="btn" type="submit">Enviar mensagem por e-mail</button>
+</form>
+</div>
+</div>
+</section>
+</main>
 
-    nav a {
-      text-decoration: none;
-      color: var(--texto);
-      font-weight: 600;
-    }
+<footer>
+<div class="container">
+<p>RS Informática — Serviços de informática e suporte técnico em TI</p>
+<p>Campinas e cidades próximas · Suporte remoto</p>
+</div>
+</footer>
 
-    nav a:hover {
-      color: var(--azul);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border: 0;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .btn-whatsapp {
-      background: var(--verde);
-      color: var(--branco);
-    }
-
-    .btn-whatsapp:hover {
-      background: #0e7137;
-    }
-
-    .btn-azul {
-      background: var(--azul);
-      color: var(--branco);
-    }
-
-    .btn-azul:hover {
-      background: #0849c9;
-    }
-
-    .hero {
-      background: linear-gradient(
-        120deg,
-        var(--azul-escuro),
-        var(--azul)
-      );
-      color: var(--branco);
-      padding: 90px 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.25;
-      max-width: 760px;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      font-size: 1.1rem;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .local {
-      display: inline-block;
-      margin-top: 22px;
-      background: rgba(255, 255, 255, .14);
-      padding: 10px 16px;
-      border-radius: 16px;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    .titulo {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .titulo h2 {
-      font-size: clamp(1.6rem, 4vw, 2.3rem);
-      color: var(--azul-escuro);
-    }
-
-    .titulo p {
-      color: #57606d;
-      max-width: 680px;
-      margin: 10px auto 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--cinza);
-      padding: 28px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-    }
-
-    .card h3 {
-      color: var(--azul-escuro);
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #4c5563;
-    }
-
-    .destaque {
-      background: var(--cinza);
-    }
-
-    .destaque-grid,
-    .contato-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: start;
-    }
-
-    .destaque h2 {
-      color: var(--azul-escuro);
-      margin-bottom: 16px;
-      font-size: 2rem;
-    }
-
-    .destaque ul {
-      margin-top: 18px;
-      padding-left: 22px;
-    }
-
-    .destaque li {
-      margin-bottom: 10px;
-    }
-
-    .destaque .card {
-      background: var(--branco);
-    }
-
-    .espaco {
-      margin-top: 22px;
-    }
-
-    form {
-      background: var(--cinza);
-      padding: 28px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-    }
-
-    label {
+<a class="btn verde flutuante" href="https://wa.me/5519984159917">WhatsApp</a>
+</body>
+</html>
