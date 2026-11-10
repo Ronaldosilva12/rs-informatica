@@ -1,497 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RS Informática | Suporte Técnico em TI em Campinas e Região</title>
-  <meta name="description" content="RS Informática oferece suporte técnico em TI, manutenção de computadores, redes, formatação, backup e suporte remoto em Campinas e cidades próximas.">
-
-  <style>
-    :root {
-      --azul: #0b5fff;
-      --azul-escuro: #062a63;
-      --cinza: #f4f7fb;
-      --texto: #1d2430;
-      --branco: #ffffff;
-      --verde: #25d366;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
-
-    body {
-      color: var(--texto);
-      background: var(--branco);
-      line-height: 1.6;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--branco);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--azul-escuro);
-    }
-
-    .logo span {
-      color: var(--azul);
-    }
-
-    nav ul {
-      display: flex;
-      gap: 22px;
-      list-style: none;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--texto);
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: var(--azul);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: .2s;
-    }
-
-    .btn-whatsapp {
-      background: var(--verde);
-      color: var(--branco);
-    }
-
-    .btn-whatsapp:hover {
-      background: #1da851;
-    }
-
-    .btn-azul {
-      background: var(--azul);
-      color: var(--branco);
-    }
-
-    .btn-azul:hover {
-      background: #0849c9;
-    }
-
-    .hero {
-      background: linear-gradient(120deg, var(--azul-escuro), var(--azul));
-      color: var(--branco);
-      padding: 90px 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      max-width: 760px;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      font-size: 1.1rem;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .local {
-      display: inline-block;
-      margin-top: 18px;
-      background: rgba(255, 255, 255, .14);
-      padding: 10px 16px;
-      border-radius: 50px;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 75px 0;
-    }
-
-    .titulo {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .titulo h2 {
-      font-size: clamp(1.6rem, 4vw, 2.3rem);
-      color: var(--azul-escuro);
-    }
-
-    .titulo p {
-      color: #57606d;
-      max-width: 680px;
-      margin: 10px auto 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      background: var(--cinza);
-      padding: 28px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-    }
-
-    .card h3 {
-      color: var(--azul-escuro);
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #4c5563;
-    }
-
-    .destaque {
-      background: var(--cinza);
-    }
-
-    .destaque-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .destaque ul {
-      margin-top: 18px;
-      list-style: none;
-    }
-
-    .destaque li {
-      margin-bottom: 12px;
-      padding-left: 28px;
-      position: relative;
-    }
-
-    .destaque li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: var(--azul);
-      font-weight: bold;
-    }
-
-    .contato-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 40px;
-    }
-
-    form {
-      background: var(--cinza);
-      padding: 28px;
-      border-radius: 14px;
-      border: 1px solid #e2e8f0;
-    }
-
-    label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 18px;
-      border: 1px solid #c9d3e0;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .info-contato a {
-      color: var(--azul);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    footer {
-      background: var(--azul-escuro);
-      color: #cdd8ea;
-      padding: 30px 0;
-      text-align: center;
-    }
-
-    .whatsapp-flutuante {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 200;
-      background: var(--verde);
-      color: var(--branco);
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-weight: 800;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-    }
-
-    @media (max-width: 850px) {
-      nav {
-        display: none;
-      }
-
-      .destaque-grid,
-      .contato-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="container header">
-    <div class="logo">RS <span>Informática</span></div>
-
-    <nav>
-      <ul>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#remoto">Suporte Remoto</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Preciso%20de%20suporte%20t%C3%A9cnico%20em%20TI."
-       target="_blank" rel="noopener">
-      WhatsApp
-    </a>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <h1>Suporte técnico em TI para empresas e residências</h1>
-      <p>
-        A RS Informática oferece manutenção de computadores, suporte técnico, configuração de redes,
-        formatação, backup e atendimento remoto. Atendemos Campinas e cidades próximas.
-      </p>
-
-      <div class="hero-buttons">
-        <a class="btn btn-whatsapp"
-           href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Preciso%20de%20suporte%20t%C3%A9cnico%20em%20TI."
-           target="_blank" rel="noopener">
-          Falar no WhatsApp
-        </a>
-
-        <a class="btn btn-azul" href="#contato">
-          Solicitar orçamento
-        </a>
-      </div>
-
-      <span class="local">📍 Campinas e cidades próximas • Suporte remoto disponível</span>
-    </div>
-  </section>
-
-  <section id="servicos">
-    <div class="container">
-      <div class="titulo">
-        <h2>Nossos serviços</h2>
-        <p>Soluções técnicas para resolver problemas, melhorar o desempenho e manter seus equipamentos funcionando com segurança.</p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Suporte técnico em TI</h3>
-          <p>Diagnóstico e resolução de problemas em computadores, notebooks, impressoras, periféricos, sistemas e programas.</p>
-        </div>
-
-        <div class="card">
-          <h3>Manutenção preventiva</h3>
-          <p>Limpeza, atualização, otimização, verificação de segurança e acompanhamento periódico dos equipamentos.</p>
-        </div>
-
-        <div class="card">
-          <h3>Formatação e instalação</h3>
-          <p>Formatação segura, instalação do Windows, drivers, pacotes Office, antivírus e programas essenciais.</p>
-        </div>
-
-        <div class="card">
-          <h3>Redes e Wi-Fi</h3>
-          <p>Configuração de roteadores, redes cabeadas, Wi-Fi, compartilhamento de arquivos e solução de conectividade.</p>
-        </div>
-
-        <div class="card">
-          <h3>Backup e recuperação</h3>
-          <p>Planejamento de backup, cópia de dados importantes e orientação para recuperação de arquivos.</p>
-        </div>
-
-        <div class="card">
-          <h3>Montagem e upgrades</h3>
-          <p>Montagem de computadores, substituição de peças, upgrades de memória, SSD e melhorias de desempenho.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="destaque" id="remoto">
-    <div class="container destaque-grid">
-      <div>
-        <h2>Suporte remoto rápido e prático</h2>
-        <p>
-          Muitos problemas podem ser resolvidos sem deslocamento. Com o suporte remoto,
-          atendemos computadores e notebooks por acesso controlado, com agilidade e segurança.
-        </p>
-
-        <ul>
-          <li>Resolução de lentidão e erros no sistema</li>
-          <li>Configuração de programas e e-mail</li>
-          <li>Correção de problemas de rede e Wi-Fi</li>
-          <li>Instalação e atualização de softwares</li>
-          <li>Orientação técnica e suporte ao usuário</li>
-          <li>Atendimento para empresas e residências</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Precisa de ajuda agora?</h3>
-        <p>
-          Fale diretamente pelo WhatsApp, descreva o problema e solicite um atendimento remoto
-          ou presencial em Campinas e região.
-        </p>
-
-        <br>
-
-        <a class="btn btn-whatsapp"
-           href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Preciso%20de%20suporte%20t%C3%A9cnico%20em%20TI."
-           target="_blank" rel="noopener">
-          Chamar no WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="container">
-      <div class="titulo">
-        <h2>Solicite um atendimento</h2>
-        <p>Preencha o formulário para enviar sua solicitação por e-mail. Também estamos disponíveis pelo WhatsApp.</p>
-      </div>
-
-      <div class="contato-grid">
-        <div class="info-contato">
-          <h3>Fale com a RS Informática</h3>
-          <p>
-            Atendemos demandas de suporte técnico, manutenção, redes, formatação, backup,
-            configuração de sistemas e suporte remoto.
-          </p>
-
-          <br>
-
-          <p><strong>WhatsApp:</strong><br>
-            <a href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Preciso%20de%20suporte%20t%C3%A9cnico%20em%20TI."
-               target="_blank" rel="noopener">
-              (19) 98415-9917
-            </a>
-          </p>
-
-          <br>
-
-          <p><strong>E-mail:</strong><br>
-            <a href="mailto:ronaldosilva2048@gmail.com">ronaldosilva2048@gmail.com</a>
-          </p>
-
-          <br>
-
-          <p><strong>Área de atendimento:</strong><br>
-            Campinas e cidades próximas<br>
-            Suporte remoto para todo o Brasil
-          </p>
-        </div>
-
-        <form action="https://formsubmit.co/ronaldosilva2048@gmail.com" method="POST">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
-
-          <label for="telefone">Telefone / WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(19) 99999-9999" required>
-
-          <label for="cidade">Cidade</label>
-          <input type="text" id="cidade" name="cidade" placeholder="Campinas ou outra cidade" required>
-
-          <label for="servico">Serviço desejado</label>
-          <input type="text" id="servico" name="servico" placeholder="Ex.: formatação, rede, suporte remoto" required>
-
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Descreva o problema ou o serviço que você precisa." required></textarea>
-
-          <input type="hidden" name="_subject" value="Nova solicitação pelo site - RS Informática">
-          <input type="hidden" name="_captcha" value="false">
-
-          <button class="btn btn-azul" type="submit">
-            Enviar mensagem por e-mail
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <p><strong>RS Informática</strong> — Serviços de informática e suporte técnico em TI</p>
-    <p>Campinas e cidades próximas • Suporte remoto disponível</p>
-    <p>© <span id="ano"></span> RS Informática. Todos os direitos reservados.</p>
-  </div>
-</footer>
-
-<a class="whatsapp-flutuante"
-   href="https://wa.me/5519984159917?text=Ol%C3%A1!%20Preciso%20de%20suporte%20t%C3%A9cnico%20em%20TI."
-   target="_blank" rel="noopener">
-  WhatsApp
-</a>
-
-<script>
-  document.getElementById("ano").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+<form action="https://formsubmit.co/ronaldosilva2048@gmail.com" method="POST">
+  <label for="nome">Nome</label>
+  <input
+    type="text"
+    id="nome"
+    name="nome"
+    placeholder="Seu nome completo"
+    required
+  >
+
+  <label for="email">E-mail</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="seuemail@dominio.com"
+    required
+  >
+
+  <label for="telefone">Telefone / WhatsApp</label>
+  <input
+    type="tel"
+    id="telefone"
+    name="telefone"
+    placeholder="(19) 99999-9999"
+    required
+  >
+
+  <label for="cidade">Cidade</label>
+  <input
+    type="text"
+    id="cidade"
+    name="cidade"
+    placeholder="Campinas ou outra cidade"
+    required
+  >
+
+  <label for="servico">Serviço desejado</label>
+  <input
+    type="text"
+    id="servico"
+    name="servico"
+    placeholder="Ex.: formatação, rede, suporte remoto"
+    required
+  >
+
+  <label for="mensagem">Mensagem</label>
+  <textarea
+    id="mensagem"
+    name="mensagem"
+    placeholder="Descreva o problema ou o serviço que você precisa."
+    required
+  ></textarea>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Nova solicitação pelo site - RS Informática"
+  >
+
+  <input
+    type="hidden"
+    name="_next"
+    value="https://rsinformatica.netlify.app/obrigado.html"
+  >
+
+  <input type="hidden" name="_captcha" value="false">
+
+  <button class="btn btn-azul" type="submit">
+    Enviar mensagem por e-mail
+  </button>
+</form>
