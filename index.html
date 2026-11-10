@@ -1,72 +1,228 @@
-<form action="https://formsubmit.co/ronaldosilva2048@gmail.com" method="POST">
-  <label for="nome">Nome</label>
-  <input
-    type="text"
-    id="nome"
-    name="nome"
-    placeholder="Seu nome completo"
-    required
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RS Informática | Suporte Técnico em Campinas e Região</title>
+
+  <meta
+    name="description"
+    content="RS Informática: suporte técnico em TI, manutenção de computadores, formatação, redes, backup e suporte remoto. Atendimento em Campinas e cidades próximas."
   >
 
-  <label for="email">E-mail</label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    placeholder="seuemail@dominio.com"
-    required
-  >
+  <style>
+    :root {
+      --azul: #0b5fff;
+      --azul-escuro: #062a63;
+      --fundo: #f4f7fb;
+      --texto: #1d2430;
+      --texto-secundario: #4c5563;
+      --branco: #ffffff;
+      --verde: #128c45;
+      --borda: #dce4ef;
+    }
 
-  <label for="telefone">Telefone / WhatsApp</label>
-  <input
-    type="tel"
-    id="telefone"
-    name="telefone"
-    placeholder="(19) 99999-9999"
-    required
-  >
+    * {
+      box-sizing: border-box;
+    }
 
-  <label for="cidade">Cidade</label>
-  <input
-    type="text"
-    id="cidade"
-    name="cidade"
-    placeholder="Campinas ou outra cidade"
-    required
-  >
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
 
-  <label for="servico">Serviço desejado</label>
-  <input
-    type="text"
-    id="servico"
-    name="servico"
-    placeholder="Ex.: formatação, rede, suporte remoto"
-    required
-  >
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.65;
+    }
 
-  <label for="mensagem">Mensagem</label>
-  <textarea
-    id="mensagem"
-    name="mensagem"
-    placeholder="Descreva o problema ou o serviço que você precisa."
-    required
-  ></textarea>
+    a {
+      color: var(--azul);
+    }
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="Nova solicitação pelo site - RS Informática"
-  >
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
 
-  <input
-    type="hidden"
-    name="_next"
-    value="https://rsinformatica.netlify.app/obrigado.html"
-  >
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #ffbf47;
+      outline-offset: 4px;
+    }
 
-  <input type="hidden" name="_captcha" value="false">
+    .container {
+      width: min(1100px, 92%);
+      margin-inline: auto;
+    }
 
-  <button class="btn btn-azul" type="submit">
-    Enviar mensagem por e-mail
-  </button>
-</form>
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--branco);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+    }
+
+    .cabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+    }
+
+    .logo {
+      color: var(--azul-escuro);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--azul);
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--texto);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    .botao {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 8px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color .2s;
+    }
+
+    .botao-whatsapp {
+      color: var(--branco);
+      background: var(--verde);
+    }
+
+    .botao-whatsapp:hover {
+      background: #0e7137;
+    }
+
+    .botao-azul {
+      color: var(--branco);
+      background: var(--azul);
+    }
+
+    .botao-azul:hover {
+      background: #0849c9;
+    }
+
+    .botao-claro {
+      color: var(--azul-escuro);
+      background: var(--branco);
+    }
+
+    .botao-claro:hover {
+      background: #e8effa;
+    }
+
+    .hero {
+      padding: 85px 0;
+      color: var(--branco);
+      background: linear-gradient(120deg, var(--azul-escuro), var(--azul));
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 0 0 22px;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 0 28px;
+      font-size: 1.1rem;
+    }
+
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .local {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .14);
+      font-size: .95rem;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .titulo {
+      max-width: 720px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--azul-escuro);
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      color: var(--azul-escuro);
+      line-height: 1.4;
+    }
+
+    .titulo p,
+    .card p {
+      margin: 0;
+      color: var(--texto-secundario);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
