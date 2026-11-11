@@ -2,83 +2,66 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RS Informática | Suporte Técnico em Campinas e Região</title>
-
-<meta name="description" content="RS Informática: suporte técnico em TI, manutenção de computadores, redes, formatação, backup e suporte remoto em Campinas e cidades próximas.">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RS Informática | Suporte Técnico em Campinas</title>
+<meta name="description" content="Suporte técnico em TI, manutenção, redes, backup e suporte remoto em Campinas e cidades próximas.">
 <style>
 *{box-sizing:border-box}
-body{margin:0;font:16px/1.6 Arial,sans-serif;color:#24303d;background:#f6f8fb}
-.container{width:92%;max-width:1120px;margin:auto}
-header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid #dfe6ee;box-shadow:0 2px 10px rgba(15,35,60,.06)}
-.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:15px 0}
-.logo{font-size:24px;font-weight:800;color:#10233f;text-decoration:none}
+html{scroll-padding-top:150px}
+body{margin:0;background:#f6f8fb;color:#24303d;font:16px/1.6 Arial,sans-serif}
+.container{width:92%;max-width:1100px;margin:auto}
+header{background:#fff;border-bottom:1px solid #dfe6ee}
+.topo{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;padding:18px 0}
+.logo{font-size:25px;font-weight:bold;color:#10233f;text-decoration:none}
 .logo span{color:#1f6feb}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:#24303d;font-weight:700;text-decoration:none}
-nav a:hover{color:#1f6feb}
-.btn{display:inline-block;padding:12px 20px;border:0;border-radius:8px;background:#1f6feb;color:#ffffff;font:inherit;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:.2s}
-.btn:hover{background:#1758c4}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#10233f;text-decoration:none;font-weight:bold}
+.btn{display:inline-block;padding:12px 20px;border:0;border-radius:8px;background:#1f6feb;color:#fff;font:inherit;font-weight:bold;text-decoration:none;text-align:center;cursor:pointer}
 .verde{background:#178a4b}
-.verde:hover{background:#116b39}
-.claro{background:#ffffff;color:#10233f;border:1px solid #cfd8e3}
-.claro:hover{background:#eef3f9}
-section{padding:60px 0}
-.hero{position:relative;background:#0d1b2a;color:#ffffff;padding:90px 0;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;opacity:.25}
-.hero .conteudo{position:relative;z-index:2}
-.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2;max-width:800px;margin:0 0 20px}
-.hero p{max-width:720px;font-size:18px;margin:0 0 25px;color:#dce6f2}
-.hero .botoes{display:flex;gap:12px;flex-wrap:wrap}
-.hero .local{display:inline-block;margin-top:22px;padding:10px 16px;border-radius:16px;background:rgba(255,255,255,.12);font-weight:700}
-.titulo{text-align:center;margin-bottom:36px}
-.titulo h2{font-size:clamp(26px,4vw,34px);color:#10233f;margin:0}
-.titulo p{max-width:680px;margin:10px auto 0;color:#5b6673}
+.claro{background:#fff;color:#10233f}
+section{padding:55px 0}
+.hero{color:#fff;background:linear-gradient(90deg,rgba(13,27,42,.96),rgba(13,27,42,.8)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70") center/cover}
+h1{max-width:800px;font-size:clamp(30px,5vw,46px);line-height:1.2}
+.hero p{max-width:750px;font-size:18px}
+.botoes{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
+h2{font-size:30px;color:#10233f}
+h3{color:#10233f;margin:0 0 12px}
+.titulo{text-align:center;margin-bottom:30px}
+.titulo p{color:#5b6673}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{padding:26px;background:#ffffff;border:1px solid #dfe6ee;border-radius:12px;box-shadow:0 6px 18px rgba(16,35,63,.06)}
-.card h3{color:#10233f;margin:0 0 10px}
-.card p{color:#5b6673;margin:0}
-.trabalhos{background:#0d1b2a;color:#ffffff}
-.trabalhos .titulo h2{color:#ffffff}
+.card,.caixa,form{padding:24px;background:#fff;border:1px solid #dfe6ee;border-radius:12px}
+.card p{margin:0}
+.trabalhos,footer{background:#0d1b2a;color:#fff}
+.trabalhos h2{color:#fff}
 .trabalhos .titulo p{color:#b9c6d6}
-.fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.foto{margin:0;overflow:hidden;border-radius:12px;background:#152a44;border:1px solid #2b4a6f;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-.foto img{display:block;width:100%;height:230px;object-fit:cover;transition:.3s}
-.foto:hover img{transform:scale(1.04)}
-.foto figcaption{padding:14px;font-weight:700;color:#ffffff;text-align:center;background:rgba(13,27,42,.85)}
+figure{margin:0;background:#152a44;border-radius:12px;overflow:hidden}
+figure img{display:block;width:100%;height:210px;object-fit:cover}
+figcaption{padding:14px;text-align:center;font-weight:bold}
 .remoto{background:#eef3f8}
-.colunas{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
-.remoto h2{color:#10233f;margin:0 0 14px}
-.remoto ul{margin:18px 0 0;padding-left:22px}
-.remoto li{margin-bottom:10px}
-.caixa{padding:26px;background:#ffffff;border:1px solid #dfe6ee;border-radius:12px;box-shadow:0 6px 18px rgba(16,35,63,.06)}
-.espaco{margin-top:20px}
-.contato{background:#ffffff}
-form{padding:26px;background:#f6f8fb;border:1px solid #dfe6ee;border-radius:12px}
-label{display:block;font-weight:700;margin:14px 0 6px}
-input:not([type=hidden]),textarea{display:block;width:100%;padding:12px;border:1px solid #b8c4d2;border-radius:7px;background:#ffffff;color:#24303d;font:inherit}
+.colunas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+.contato{background:#fff}
+.info a{color:#1f6feb;overflow-wrap:anywhere}
+.info p{margin-bottom:24px}
+form{background:#f6f8fb}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input:not([type=hidden]),textarea{width:100%;padding:12px;border:1px solid #b8c4d2;border-radius:7px;background:#fff;font:inherit;color:#24303d}
 textarea{min-height:140px;resize:vertical}
-.aviso{font-size:13px;color:#5b6673;margin:16px 0}
-.contato-info h3{color:#10233f;margin:0 0 14px}
-.contato-info p{margin:0 0 22px}
-.contato-info a{color:#1f6feb;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
-footer{padding:30px 0 95px;background:#0d1b2a;color:#b9c6d6;text-align:center}
-footer p{margin:0 0 6px}
-.flutuante{position:fixed;right:18px;bottom:18px;z-index:200;border-radius:40px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.aviso{font-size:13px;color:#5b6673}
+.antispam{display:none}
+footer{padding:30px 0 100px;text-align:center}
+.flutuante{position:fixed;right:16px;bottom:16px;z-index:20;border-radius:40px;box-shadow:0 5px 20px #0004}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffb703;outline-offset:3px}
-@media(max-width:850px){.grid,.fotos{grid-template-columns:repeat(2,minmax(0,1fr))}.colunas{grid-template-columns:1fr}}
-@media(max-width:550px){.grid,.fotos{grid-template-columns:1fr}.hero{padding:60px 0}.hero .botoes .btn{width:100%}.card,form,.caixa{padding:20px}}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.colunas{grid-template-columns:1fr}}
+@media(max-width:550px){.grid{grid-template-columns:1fr}.botoes .btn{width:100%}nav{font-size:14px}.card,.caixa,form{padding:20px}}
 </style>
 </head>
-
 <body>
 <header>
 <div class="container topo">
 <a class="logo" href="#inicio">RS <span>Informática</span></a>
 <nav aria-label="Menu principal">
 <a href="#servicos">Serviços</a>
-<a href="#trabalhos">Trabalhos</a>
+<a href="#fotos">Fotos</a>
 <a href="#remoto">Suporte remoto</a>
 <a href="#contato">Contato</a>
 </nav>
@@ -88,6 +71,162 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 <main>
 <section class="hero" id="inicio">
-<div class="container conteudo">
+<div class="container">
 <h1>Suporte técnico em TI para empresas e residências</h1>
-<p>Manutenção de computadores, configuração de redes, formatação, backup e suporte
+<p>Manutenção de computadores, configuração de redes, formatação, backup e suporte remoto. Atendimento em Campinas e cidades próximas.</p>
+<div class="botoes">
+<a class="btn verde" href="https://wa.me/5519984159917" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+<a class="btn claro" href="#contato">Solicitar orçamento</a>
+</div>
+<p>Campinas e cidades próximas · Suporte remoto mediante avaliação</p>
+</div>
+</section>
+
+<section id="servicos">
+<div class="container">
+<div class="titulo">
+<h2>Nossos serviços</h2>
+<p>Atendimento técnico para necessidades pessoais e profissionais.</p>
+</div>
+<div class="grid">
+<article class="card">
+<h3>Suporte técnico em TI</h3>
+<p>Diagnóstico e atendimento para computadores, notebooks, impressoras, sistemas e programas.</p>
+</article>
+<article class="card">
+<h3>Manutenção preventiva</h3>
+<p>Limpeza, verificação de componentes, atualizações e ajustes no equipamento.</p>
+</article>
+<article class="card">
+<h3>Formatação e instalação</h3>
+<p>Instalação de Windows, drivers e programas, com definição prévia dos cuidados com seus arquivos.</p>
+</article>
+<article class="card">
+<h3>Redes e Wi-Fi</h3>
+<p>Configuração de roteadores, redes cabeadas e compartilhamento de arquivos.</p>
+</article>
+<article class="card">
+<h3>Backup e arquivos</h3>
+<p>Configuração de cópias de segurança, transferência de arquivos e orientação ao usuário.</p>
+</article>
+<article class="card">
+<h3>Montagem e upgrades</h3>
+<p>Avaliação de compatibilidade, montagem de computadores, instalação de SSD e memória.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="trabalhos" id="fotos">
+<div class="container">
+<div class="titulo">
+<h2>Tecnologia e informática</h2>
+<p>Fotos ilustrativas. Não representam serviços realizados ou instalações da RS Informática.</p>
+</div>
+<div class="grid">
+<figure>
+<img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa de equipamento de informática" loading="lazy" decoding="async">
+<figcaption>Manutenção de computadores</figcaption>
+</figure>
+<figure>
+<img src="https://images.unsplash.com/photo-1591799264318-7e6ef5ddb4ea?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa de hardware" loading="lazy" decoding="async">
+<figcaption>Diagnóstico e upgrades</figcaption>
+</figure>
+<figure>
+<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa de infraestrutura de rede" loading="lazy" decoding="async">
+<figcaption>Redes e conectividade</figcaption>
+</figure>
+<figure>
+<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa relacionada à informática" loading="lazy" decoding="async">
+<figcaption>Suporte e configuração</figcaption>
+</figure>
+<figure>
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa de tecnologia" loading="lazy" decoding="async">
+<figcaption>Suporte técnico em TI</figcaption>
+</figure>
+<figure>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=70" alt="Imagem ilustrativa de componentes eletrônicos" loading="lazy" decoding="async">
+<figcaption>Hardware e componentes</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="remoto" id="remoto">
+<div class="container colunas">
+<div>
+<h2>Suporte remoto</h2>
+<p>Solicite uma avaliação para verificar se o problema pode ser atendido remotamente. O acesso ao equipamento é realizado com sua autorização.</p>
+<ul>
+<li>Diagnóstico de erros e lentidão.</li>
+<li>Configuração de programas e e-mail.</li>
+<li>Instalação e atualização de softwares.</li>
+<li>Orientação técnica ao usuário.</li>
+<li>Atendimento para empresas e residências.</li>
+</ul>
+</div>
+<aside class="caixa">
+<h3>Precisa de ajuda?</h3>
+<p>Descreva o problema pelo WhatsApp e solicite uma avaliação para atendimento remoto ou presencial em Campinas e região.</p>
+<a class="btn verde" href="https://wa.me/5519984159917" target="_blank" rel="noopener noreferrer">Solicitar suporte remoto</a>
+</aside>
+</div>
+</section>
+
+<section class="contato" id="contato">
+<div class="container">
+<div class="titulo">
+<h2>Solicite um atendimento</h2>
+<p>Envie sua solicitação pelo formulário ou fale pelo WhatsApp.</p>
+</div>
+<div class="colunas">
+<div class="info">
+<h3>Fale com a RS Informática</h3>
+<p>Suporte técnico, manutenção, redes, formatação, backup e atendimento remoto.</p>
+<p>WhatsApp:<br><a href="https://wa.me/5519984159917" target="_blank" rel="noopener noreferrer">(19) 98415-9917</a></p>
+<p>E-mail:<br><a href="mailto:ronaldosilva2018@gmail.com">ronaldosilva2018@gmail.com</a></p>
+<p>Campinas e cidades próximas.<br>Suporte remoto mediante avaliação.</p>
+</div>
+
+<form action="https://formsubmit.co/ronaldosilva2018@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nova solicitação pelo site - RS Informática">
+<div class="antispam" aria-hidden="true">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-label="Deixe vazio">
+</div>
+
+<label for="nome">Nome</label>
+<input id="nome" name="nome" type="text" autocomplete="name" required>
+
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" autocomplete="email" required>
+
+<label for="telefone">Telefone / WhatsApp</label>
+<input id="telefone" name="telefone" type="tel" autocomplete="tel" required>
+
+<label for="cidade">Cidade</label>
+<input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
+
+<label for="servico">Serviço desejado</label>
+<input id="servico" name="servico" type="text" placeholder="Ex.: manutenção ou suporte remoto" required>
+
+<label for="mensagem">Mensagem</label>
+<textarea id="mensagem" name="mensagem" placeholder="Descreva o problema ou o serviço desejado." required></textarea>
+
+<p class="aviso">Seus dados serão encaminhados pelo FormSubmit à RS Informática para responder à solicitação. Não envie senhas, dados bancários ou informações sensíveis.</p>
+<button class="btn" type="submit">Enviar mensagem por e-mail</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<p>RS Informática — Serviços de informática e suporte técnico em TI</p>
+<p>Campinas e cidades próximas · Suporte remoto mediante avaliação</p>
+</div>
+</footer>
+
+<a class="btn verde flutuante" href="https://wa.me/5519984159917" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+</body>
+</html>
