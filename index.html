@@ -9,63 +9,66 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font:16px/1.6 Arial,sans-serif;color:#1d2430;background:#ffffff}
-.container{width:92%;max-width:1100px;margin:auto}
-header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid #dce4ef}
-.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0}
-.logo{font-size:25px;font-weight:800;color:#062a63;text-decoration:none}
-.logo span{color:#0b5fff}
+body{margin:0;font:16px/1.6 Arial,sans-serif;color:#24303d;background:#f6f8fb}
+.container{width:92%;max-width:1120px;margin:auto}
+header{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid #dfe6ee;box-shadow:0 2px 10px rgba(15,35,60,.06)}
+.topo{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:15px 0}
+.logo{font-size:24px;font-weight:800;color:#10233f;text-decoration:none}
+.logo span{color:#1f6feb}
 nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:#1d2430;font-weight:700;text-decoration:none}
-nav a:hover{color:#0b5fff}
-.btn{display:inline-block;padding:12px 20px;border:0;border-radius:8px;background:#0b5fff;color:#ffffff;font:inherit;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
-.btn:hover{background:#0849c9}
-.verde{background:#128c45}
-.verde:hover{background:#0e7137}
-.claro{background:#ffffff;color:#062a63}
-.claro:hover{background:#e8eef7}
-section{padding:65px 0}
-.hero{background:linear-gradient(120deg,#062a63,#0b5fff);color:#ffffff;padding:85px 0}
-.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2;max-width:780px;margin:0 0 20px}
-.hero p{max-width:720px;font-size:18px;margin:0 0 25px}
+nav a{color:#24303d;font-weight:700;text-decoration:none}
+nav a:hover{color:#1f6feb}
+.btn{display:inline-block;padding:12px 20px;border:0;border-radius:8px;background:#1f6feb;color:#ffffff;font:inherit;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:#1758c4}
+.verde{background:#178a4b}
+.verde:hover{background:#116b39}
+.claro{background:#ffffff;color:#10233f;border:1px solid #cfd8e3}
+.claro:hover{background:#eef3f9}
+section{padding:60px 0}
+.hero{position:relative;background:#0d1b2a;color:#ffffff;padding:90px 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;opacity:.25}
+.hero .conteudo{position:relative;z-index:2}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.2;max-width:800px;margin:0 0 20px}
+.hero p{max-width:720px;font-size:18px;margin:0 0 25px;color:#dce6f2}
 .hero .botoes{display:flex;gap:12px;flex-wrap:wrap}
-.hero .local{display:inline-block;margin-top:22px;padding:10px 16px;border-radius:16px;background:rgba(255,255,255,.15);font-weight:700}
-.titulo{text-align:center;margin-bottom:38px}
-.titulo h2{font-size:clamp(26px,4vw,36px);color:#062a63;margin:0}
-.titulo p{max-width:680px;margin:10px auto 0;color:#57606d}
+.hero .local{display:inline-block;margin-top:22px;padding:10px 16px;border-radius:16px;background:rgba(255,255,255,.12);font-weight:700}
+.titulo{text-align:center;margin-bottom:36px}
+.titulo h2{font-size:clamp(26px,4vw,34px);color:#10233f;margin:0}
+.titulo p{max-width:680px;margin:10px auto 0;color:#5b6673}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{padding:26px;background:#f4f7fb;border:1px solid #dce4ef;border-radius:12px}
-.card h3{color:#062a63;margin:0 0 10px}
-.card p{color:#4c5563;margin:0}
-.trabalhos{background:#0a1f3d;color:#ffffff}
+.card{padding:26px;background:#ffffff;border:1px solid #dfe6ee;border-radius:12px;box-shadow:0 6px 18px rgba(16,35,63,.06)}
+.card h3{color:#10233f;margin:0 0 10px}
+.card p{color:#5b6673;margin:0}
+.trabalhos{background:#0d1b2a;color:#ffffff}
 .trabalhos .titulo h2{color:#ffffff}
-.trabalhos .titulo p{color:#b8c7dd}
-.fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.foto{overflow:hidden;border-radius:12px;background:#12294b;border:1px solid #24406b}
-.foto img{display:block;width:100%;height:220px;object-fit:cover}
-.foto figcaption{padding:14px;font-weight:700;color:#ffffff;text-align:center}
-.remoto{background:#f4f7fb}
+.trabalhos .titulo p{color:#b9c6d6}
+.fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.foto{margin:0;overflow:hidden;border-radius:12px;background:#152a44;border:1px solid #2b4a6f;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.foto img{display:block;width:100%;height:230px;object-fit:cover;transition:.3s}
+.foto:hover img{transform:scale(1.04)}
+.foto figcaption{padding:14px;font-weight:700;color:#ffffff;text-align:center;background:rgba(13,27,42,.85)}
+.remoto{background:#eef3f8}
 .colunas{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}
-.remoto h2{color:#062a63;margin:0 0 14px}
+.remoto h2{color:#10233f;margin:0 0 14px}
 .remoto ul{margin:18px 0 0;padding-left:22px}
 .remoto li{margin-bottom:10px}
-.caixa{padding:26px;background:#ffffff;border:1px solid #dce4ef;border-radius:12px}
+.caixa{padding:26px;background:#ffffff;border:1px solid #dfe6ee;border-radius:12px;box-shadow:0 6px 18px rgba(16,35,63,.06)}
 .espaco{margin-top:20px}
 .contato{background:#ffffff}
-form{padding:26px;background:#f4f7fb;border:1px solid #dce4ef;border-radius:12px}
+form{padding:26px;background:#f6f8fb;border:1px solid #dfe6ee;border-radius:12px}
 label{display:block;font-weight:700;margin:14px 0 6px}
-input:not([type=hidden]),textarea{display:block;width:100%;padding:12px;border:1px solid #aebdce;border-radius:7px;background:#ffffff;color:#1d2430;font:inherit}
+input:not([type=hidden]),textarea{display:block;width:100%;padding:12px;border:1px solid #b8c4d2;border-radius:7px;background:#ffffff;color:#24303d;font:inherit}
 textarea{min-height:140px;resize:vertical}
-.aviso{font-size:13px;color:#526070;margin:16px 0}
-.contato-info h3{color:#062a63;margin:0 0 14px}
+.aviso{font-size:13px;color:#5b6673;margin:16px 0}
+.contato-info h3{color:#10233f;margin:0 0 14px}
 .contato-info p{margin:0 0 22px}
-.contato-info a{color:#0b5fff;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
-footer{padding:30px 0 95px;background:#062a63;color:#cdd8ea;text-align:center}
+.contato-info a{color:#1f6feb;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+footer{padding:30px 0 95px;background:#0d1b2a;color:#b9c6d6;text-align:center}
 footer p{margin:0 0 6px}
 .flutuante{position:fixed;right:18px;bottom:18px;z-index:200;border-radius:40px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffb703;outline-offset:3px}
 @media(max-width:850px){.grid,.fotos{grid-template-columns:repeat(2,minmax(0,1fr))}.colunas{grid-template-columns:1fr}}
-@media(max-width:550px){.grid,.fotos{grid-template-columns:1fr}.hero{padding:55px 0}.hero .botoes .btn{width:100%}.card,form,.caixa{padding:20px}}
+@media(max-width:550px){.grid,.fotos{grid-template-columns:1fr}.hero{padding:60px 0}.hero .botoes .btn{width:100%}.card,form,.caixa{padding:20px}}
 </style>
 </head>
 
@@ -85,7 +88,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 <main>
 <section class="hero" id="inicio">
-<div class="container">
+<div class="container conteudo">
 <h1>Suporte técnico em TI para empresas e residências</h1>
 <p>Manutenção de computadores, configuração de redes, formatação, backup e suporte remoto. Atendimento em Campinas e cidades próximas.</p>
 <div class="botoes">
@@ -140,33 +143,33 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 <div class="fotos">
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=900&q=80" alt="Técnico realizando manutenção em computador">
+<img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=900&q=80" alt="Técnico realizando manutenção em equipamento de informática">
 <figcaption>Manutenção de computador</figcaption>
 </figure>
 
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Placa-mãe e componentes de computador durante manutenção">
+<img src="https://images.unsplash.com/photo-1591799264318-7e6ef5ddb4ea?auto=format&fit=crop&w=900&q=80" alt="Placa-mãe e componentes de computador durante manutenção">
 <figcaption>Diagnóstico e upgrades</figcaption>
 </figure>
 
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=900&q=80" alt="Técnico trabalhando em rede e equipamentos de informática">
+<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80" alt="Equipamentos de rede e cabos em ambiente técnico">
 <figcaption>Redes e Wi-Fi</figcaption>
 </figure>
 
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=900&q=80" alt="Notebook em suporte técnico e manutenção">
+<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=900&q=80" alt="Notebook em bancada para suporte técnico">
 <figcaption>Suporte para notebooks</figcaption>
 </figure>
 
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=900&q=80" alt="Configuração de equipamentos e suporte técnico remoto">
-<figcaption>Suporte remoto</figcaption>
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" alt="Ambiente tecnológico com equipamentos de informática">
+<figcaption>Suporte técnico em TI</figcaption>
 </figure>
 
 <figure class="foto">
-<img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=900&q=80" alt="Organização de cabos e equipamentos de rede">
-<figcaption>Organização de equipamentos</figcaption>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Componentes eletrônicos e hardware de computador">
+<figcaption>Hardware e componentes</figcaption>
 </figure>
 </div>
 </div>
